@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aarti Jaiswal | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: #ffffff;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: #38bdf8;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    section {
+      padding: 100px 10%;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .hero-content h3 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .hero-content h1 {
+      font-size: 65px;
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    .hero-content p {
+      line-height: 1.8;
+      margin: 20px 0;
+      max-width: 650px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #38bdf8;
+      color: #0f172a;
+      padding: 12px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+      margin-top: 15px;
+    }
+
+    .btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px #38bdf8;
+    }
+
+    .social-icons {
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      color: #38bdf8;
+      margin-right: 15px;
+      font-size: 24px;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: white;
+    }
+
+    .hero-image img {
+      width: 350px;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .heading {
+      text-align: center;
+      font-size: 45px;
+      margin-bottom: 50px;
+    }
+
+    .heading span {
+      color: #38bdf8;
+    }
+
+    .about {
+      background: #111827;
+      border-radius: 25px;
+    }
+
+    .about p {
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #111827;
+      padding: 30px;
+      border-radius: 20px;
+      transition: 0.3s;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+    }
+
+    .card i {
+      font-size: 50px;
+      color: #38bdf8;
+      margin-bottom: 20px;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .timeline-item {
+      background: #111827;
+      padding: 25px;
+      border-left: 5px solid #38bdf8;
+      border-radius: 15px;
+    }
+
+    .timeline-item h3 {
+      margin-bottom: 8px;
+    }
+
+    .timeline-item span {
+      color: #38bdf8;
+      font-size: 14px;
+    }
+
+    .contact-box {
+      background: #111827;
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    .contact-box p {
+      margin: 15px 0;
+      font-size: 18px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #111827;
+      margin-top: 40px;
+    }
+
+    @media(max-width: 900px) {
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .hero-content h1 {
+        font-size: 45px;
+      }
+
+      nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Aarti Jaiswal</div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h3>Hello, I'm</h3>
+    <h1>Aarti Jaiswal</h1>
+    <h3>Computer Science Lecturer & Web Developer</h3>
+
+    <p>
+      Passionate Computer Science Engineering Lecturer with teaching experience,
+      strong programming knowledge, and expertise in HTML, CSS, JavaScript,
+      PHP, Database Management Systems, and Cloud Computing.
+    </p>
+
+    <a href="#contact" class="btn">Contact Me</a>
+
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <img src="https://cdn-icons-png.flaticon.com/512/6997/6997662.png" alt="profile">
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2 class="heading">About <span>Me</span></h2>
+
+  <p>
+    I am a Computer Science Engineering Lecturer with 3 years of teaching experience.
+    I focus on practical learning, innovative teaching methods, and student development.
+    I have also worked as a PHP Developer Intern and developed multiple academic and
+    real-world projects.
+  </p>
+
+  <p>
+    My areas of interest include Web Development, Cloud Computing, Database Management,
+    and Programming Concepts.
+  </p>
+</section>
+
+<section id="skills">
+  <h2 class="heading">My <span>Skills</span></h2>
+
+  <div class="cards">
+    <div class="card">
+      <i class="fab fa-html5"></i>
+      <h3>HTML5</h3>
+    </div>
+
+    <div class="card">
+      <i class="fab fa-css3-alt"></i>
+      <h3>CSS3</h3>
+    </div>
+
+    <div class="card">
+      <i class="fab fa-js"></i>
+      <h3>JavaScript</h3>
+    </div>
+
+    <div class="card">
+      <i class="fab fa-php"></i>
+      <h3>PHP</h3>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-database"></i>
+      <h3>MySQL</h3>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-cloud"></i>
+      <h3>Cloud Computing</h3>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="heading">Latest <span>Projects</span></h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Online Bus Pass System</h3>
+      <p>
+        PHP and MySQL based website for creating and renewing bus passes online.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Job Portal</h3>
+      <p>
+        Multi-user job portal system developed using PHP, HTML, CSS, JavaScript and AJAX.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Cloud Load Balancing</h3>
+      <p>
+        Hybrid scheduling algorithm implementation using Java and CloudAnalyst Simulator.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2 class="heading">Work <span>Experience</span></h2>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <h3>Lecturer in Computer Science Engineering</h3>
+      <span>Oriental University | 2019 - 2022</span>
+      <p>
+        Delivered engaging lectures, coordinated labs, and guided students in academic projects.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>PHP Developer Intern</h3>
+      <span>Techinfini Solution Pvt. Ltd. | 2023</span>
+      <p>
+        Worked on website templates, blog systems, and dynamic web applications.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="heading">Contact <span>Me</span></h2>
+
+  <div class="contact-box">
+    <p><strong>Email:</strong> aarti1491997@gmail.com</p>
+    <p><strong>Phone:</strong> 8966883481</p>
+    <p><strong>Location:</strong> Indore, Madhya Pradesh</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Aarti Jaiswal | Portfolio Website</p>
+</footer>
+
+</body>
+</html>
